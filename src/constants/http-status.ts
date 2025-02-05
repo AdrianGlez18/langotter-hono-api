@@ -1,0 +1,5 @@
+export const NOT_FOUND_STATUS_CODE = 404;
+export const OK_STATUS_CODE = 200;
+export const UNAUTHORIZED_STATUS_CODE = 401;
+export const CREATED_STATUS_CODE = 201;
+export const INTERNAL_ERROR_STATUS_CODE = 500;
