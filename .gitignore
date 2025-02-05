@@ -28,5 +28,8 @@ lerna-debug.log*
 # misc
 .DS_Store
 
+# pnpm
+pnpm-lock.yaml
+
 # temps and drafs
 drafts
