@@ -1,9 +1,12 @@
-import { serve } from '@hono/node-server'
-import app from './app'
+import { serve } from "@hono/node-server";
 
-const port = 3000
+import env from "@/utils/env";
+
+import app from "./app";
+
+const port = env.PORT;
 
 serve({
   fetch: app.fetch,
-  port
-})
+  port,
+});
