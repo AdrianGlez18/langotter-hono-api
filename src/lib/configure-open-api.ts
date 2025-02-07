@@ -2,7 +2,6 @@ import type { AppOpenApi } from "@/constants/interfaces";
 
 import packageJSON from "@/../package.json";
 import { apiReference } from "@scalar/hono-api-reference";
-import { url } from "inspector";
 
 export default function configureOpenApi(app: AppOpenApi) {
     app.doc("/doc", {
@@ -11,6 +10,7 @@ export default function configureOpenApi(app: AppOpenApi) {
             version: packageJSON.version,
             title: "Hono API template",
         },
+        servers: [{ url: "http://localhost:3000" }],
     });
 
     app.get("/reference",

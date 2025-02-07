@@ -6,10 +6,12 @@ import { logger } from "@/middlewares/pino-logger";
 import serveEmojiFavicon from "@/middlewares/serve-emoji-favicon";
 import notFound from "@/utils/not-found";
 import onError from "@/utils/on-error";
+import defaultHook from "@/utils/default-hook";
 
 export function createRouter() {
   return new OpenAPIHono<AppBindings>({
     strict: false,
+    defaultHook,
   });
 }
 export default function initializeApp() {
